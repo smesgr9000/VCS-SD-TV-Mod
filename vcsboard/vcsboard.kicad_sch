@@ -1793,6 +1793,9 @@
     (property "Part" "MPE Garry  087-1-004" (id 4) (at 39.37 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "Part (Alt 1)" "Amphenol G800LW304032EU" (id 5) (at 39.37 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid cde616cf-461c-47e4-8dad-34102b0733c8))
   )
 
