@@ -1781,6 +1781,9 @@
   (gr_text "VCS SD/TV \nSwitch\nRev D" (at 177.8 94.5) (layer "F.SilkS") (tstamp b246b6ca-0b85-441f-bc67-39ff58892829)
     (effects (font (size 1 1) (thickness 0.15)))
   )
+  (gr_text "*" (at 182 78.2) (layer "F.SilkS") (tstamp be0571f5-faf8-4692-9e12-5fd5759fca3f)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
 
   (segment (start 184.6 85) (end 184.3 84.7) (width 0.25) (layer "F.Cu") (net 1) (tstamp 2f7e750c-9c87-4e3a-8aec-b09450b52d8c))
   (segment (start 184.6 86.5) (end 184.6 85) (width 0.25) (layer "F.Cu") (net 1) (tstamp 5c0e795b-6800-4e22-b2c4-6fe60f7ac1fd))

@@ -2535,6 +2535,9 @@
   (gr_text "Audio" (at 100 116.5 155) (layer "F.SilkS") (tstamp dfd6e4a4-1c37-4019-b1ef-cb8f03198722)
     (effects (font (size 1 0.5) (thickness 0.1) italic) (justify left))
   )
+  (gr_text "*" (at 98.3 126.1) (layer "F.SilkS") (tstamp ea8171c0-9bff-4b82-9810-74e5e2a449f9)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
 
   (segment (start 107.405 116.5) (end 107.405 116.901751) (width 0.25) (layer "F.Cu") (net 1) (tstamp 73b7e4a8-d940-4c95-9b58-af14c120f323))
   (segment (start 111.5 118) (end 108.5 118) (width 0.25) (layer "F.Cu") (net 1) (tstamp ae9662dd-899b-499f-a412-ea4100eccbcd))
