@@ -23,7 +23,7 @@ The mod uses two boards. _vcsboard_ for the logic chip and TV functionallity. _o
 
 ### vcsboard
 
-The board plays "man in the middle" and uses audio (J3), video (J2), VCC (J1) and GND (J5) from the Junior and redirect it through a switch. Then the multiplexer either forward those signals to the _outputboard_ or parts of the TV generation circuit moved/replaced on the board itself. First iteration used the original components of the junior. But to fit the circuit under the electromagnetic shield and keep the PCB production price low most of the components are replaced by more modern smaller surface mounted parts.
+The board plays "man in the middle" and uses audio (J3), video (J2), VCC (J1) and GND (J5) from the Junior and redirect it through a switch. Then the multiplexer either forward those signals to the _outputboard_ or parts of the TV generation circuit replaced by the board itself. First iteration used the original components of the junior. But to fit the circuit under the electromagnetic shield and keep the PCB production price low most of the components are replaced by more modern smaller surface mounted parts.
 
 
 ![Some revisions of the vcsboard. First revision still using the original Atari 2600 Junior components](./vcsboard.jpg)
@@ -31,7 +31,7 @@ _Some revision. Latest on the left_
 
 ### outputboard
 
-The board contains the actual switch and an LED to show the current selected output type as well as the composite modulation and a 3.5mm TRS jack for outputing the signal. The pinout of the Jack is:
+The board contains the actual switch and a LED to show the current selected output type as well as the composite modulation and a 3.5mm TRS jack for outputing the signal. The pinout of the Jack is:
 
 Part | Description
 --- | ---
@@ -40,7 +40,7 @@ Ring 1 | Left Audio
 Ring 2 | Right Audio*
 Sleeve | Groud
 
-Be aware there are several standards cables out there. Most have ground on the sleeve thus went with this design. The RCA jacks may be connected with the wrong colors but will work. If your cable has ground on first or second ring the Mod will not work, have alot of noise on the display or worst destroy something (unlikly but be rather safe than sorry and test your cable before hand!)
+Be aware there are several standards cables out there. Most have ground on the sleeve thus went with this design. The RCA jacks may be connected with the "wrong" colors but will work. If your cable has ground on first or second ring the MOD will not work, have alot of noise on the display or worst destroy something (unlikly but be rather safe than sorry and test your cable before hand!)
 
 Because the Atari VCS/2600 is mono only just the first ring has an audio signal. If you want to drive both channels with the same signal bridge the _JP1_ on the _outputboard_.
 
@@ -64,7 +64,7 @@ C49, C53, C54, L8, R43, R48 | B
 L6 | A (optional)
 C52 | B (optional)
 
-If you want to reuse coil L8 on the _vcsboard_ please remove this part. The other parts are not used. Also be aware sometimes a second coil is also attached to L8 on the underside of the board. If you want to reuse those you have to recreate the setup on the _vcsboard_. But I would suggestion replace this setup with new coils because it could be rather cramped below the shield.
+If you want to reuse coil L8 on the _vcsboard_ please remove this part gently. The other parts are not reused. Also be aware sometimes a second coil is also attached to L8 on the underside of the board. If you want to reuse those you have to recreate the setup on the _vcsboard_. But I would suggestion replace this setup with new coils because it could be rather cramped below the shield.
 
 L6 for **A** is optional and could be used to bring cables to the _outputboard_. Do **NOT** remove this for **B**! C52 for **B** is optional but make it easier to install the _vcsboard_ later.
 
@@ -110,14 +110,16 @@ R56 | Yageo RC1206JR-071K8L | 1 |
 U1 | Texas Instruments CD4053BM | 1 |
 
 ### coil configuration
-Coil L8/L8a1 should be trimable around 2µH. If L8a1 is not used both pads must be bridged! If skipped the circuit is open and will not work.
-Be aware there are two possible combinations of holes. The pin 1 next to X4 should be connected. Depending on the coil you could use either the pin labled 2
-(for Coilcraft 148-series or the Atari coil) or the pin further in (for Coilcraft 148-series). The pin in between is a for stability only and is not
+Coil L8/L8a1 should be trimable around 2µH. If L8a1 is not used both pads must be bridged! If this step is skipped the circuit is open and will not work.
+Be aware there are two possible combinations of holes. The pin 1 next to X4 should always be connected. Depending on the coil you could either use the pin labled 2
+(for Coilcraft 148-series or the Atari coil) or the pin further in (for Coilcraft 148-series). The pin in between is for stability only and is not
 connected to any other component.
 All coils should be placed axial, otherwise it will not fit under the shield. The Coilcraft 143 is the easiest to install.
-If you want to use Coilcraft 148 the top pin could be bent and the other pin connected via cable or another pin header. You may want to use some glue to fix it down.
-If you want to use the original Atari coil with metal housing use two or three pin headers and additionally could use both pads to fix it down. Please check if you have
-a setup were two coils where installed in parallel (one was located on the bottom of the Atari board).
+
+If you want to use Coilcraft 148 the top pin could be bent and the other pin connected via cable or via a pin header. You may want to use some glue to fix it down.
+
+If you want to use the original Atari coil with metal housing use two or three pin headers. Additionally you may want to use both pads to fix it down.
+Please check if you have a setup were two coils where installed in parallel (one was located on the bottom of the Atari board).
 
 ### cable pinout
 
@@ -139,9 +141,9 @@ The cable pinout for J1 on the _outputboard_ with recommended cable color. Every
 ## install boards
 
 ### for A and B
-The U-Shaped _outputboard_ should fit perfectly around the tv jack. I would suggest using one to three sticky 40 by 40mm foam pats 
+The U-shaped _outputboard_ should fit perfectly around the tv jack. I would suggest to use one to three sticky 40 by 40mm foam pads 
 under the _outputboard_ to put into place. Drill one or two holes to the left and right into the back of the tv jack.
-The second hole is only needed if you want a LED or the require the switch (**B**).
+The second hole is only needed if you want a LED or require the switch (**B**).
 
 ### only A
 Either use the existing hole in the shield to lead the cable out on the top side or if L6 was removed connect all cables 
@@ -166,8 +168,8 @@ You could also add a pin header to C54 bottom pin and C49 top pin for stability.
 ## setup the board
 
 Install shield again and power up the device. SD mode should work without setup. The TV mode require some tuning.
-If tv signal is off turn L6 until is video sginal is good again. If audio is noisy turn L8 until it goes away. If the
-audio still noisy even if the core is fully in or out. Check if your Coil setup is really around 2µH or you have you have
+If tv signal is off turn L6 until video sginal is good again. If audio is noisy turn L8 until noise goes away. If the
+audio still noisy even if the core is fully in or out. Check if your coil setup is really around 2µH or you have
 a different Atari coil which had afaik 2.5µH and more and required a second coil in parallel to bring it back down to 2µH.
 
 ![older revision installed of vcsboard and outputboard](./installed.jpg)
