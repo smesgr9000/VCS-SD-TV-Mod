@@ -4,6 +4,19 @@ VCD-SD-TV-Mod are two addon board for your **Atari VCS/2600 Jr** (Junior) game c
 
 Currently the mod is only tested on **CO21503 REV F** devices! Other may likely **not** work!
 
+- [boards](#boards)
+   - [vcsboard](#vcsboard)
+   - [outputboard](#outputboard)
+- [build boards](#build-boards)
+   - [coil configuration](#coil-configuration)
+   - [cable pinout](#cable-pinout)
+- [install boards](#install-boards)
+   - [for A and B](#for-a-and-b)
+   - [only A](#only-a)
+   - [only B](#only-b)
+- [setup the board](#setup-the-board)
+- [license](#license)
+
 ## boards
 
 The mod uses two boards. _vcsboard_ for the logic chip and TV functionallity. _outputboard_ for the actual switch and composite output. It is possible to use only the _outputboard_ if TV signals aren't needed.
@@ -13,7 +26,7 @@ The mod uses two boards. _vcsboard_ for the logic chip and TV functionallity. _o
 The board plays "man in the middle" and uses audio (J3), video (J2), VCC (J1) and GND (J5) from the Junior and redirect it through a switch. Then the multiplexer either forward those signals to the _outputboard_ or parts of the TV generation circuit moved/replaced on the board itself. First iteration used the original components of the junior. But to fit the circuit under the electromagnetic shield and keep the PCB production price low most of the components are replaced by more modern smaller surface mounted parts.
 
 
-![Some revisions of the vcsboard. First revision still using the original Atari 2600 Junior components](./vcsboards.JPG)
+![Some revisions of the vcsboard. First revision still using the original Atari 2600 Junior components](./vcsboard.jpg)
 _Some revision. Latest on the left_
 
 ### outputboard
@@ -32,7 +45,7 @@ Be aware there are several standards cables out there. Most have ground on the s
 Because the Atari VCS/2600 is mono only just the first ring has an audio signal. If you want to drive both channels with the same signal bridge the _JP1_ on the _outputboard_.
 
 
-![Some revision of the outputboard. First revision with throughole components instead of surface mounted parts](./outputboard.JPG)
+![Some revision of the outputboard. First revision with throughole components instead of surface mounted parts](./outputboard.jpg)
 _Some revision. Latest on the left_
 
 ## build boards
@@ -55,7 +68,7 @@ If you want to reuse coil L8 on the _vcsboard_ please remove this part. The othe
 
 L6 for **A** is optional and could be used to bring cables to the _outputboard_. Do **NOT** remove this for **B**! C52 for **B** is optional but make it easier to install the _vcsboard_ later.
 
-![Image of CO21503 Rev F with components to remove. C54 is the most right bottom component of the complete board. Than to the left C53, R43, C52, R56. Above C54 is L8 than to the left R48, C49. Above L8 are three components not to remove followed by C33. And left of C33 is R17 also around half a centimeter above C33. L6 is further to the left, after a DIP16 chip and three axial or one radial mounted components.](./CO21503 RevF Remove.jpg)
+![Image of CO21503 Rev F with components to remove. C54 is the most right bottom component of the complete board. Than to the left C53, R43, C52, R56. Above C54 is L8 than to the left R48, C49. Above L8 are three components not to remove followed by C33. And left of C33 is R17 also around half a centimeter above C33. L6 is further to the left, after a DIP16 chip and three axial or one radial mounted components.](<./CO21503 RevF Remove.jpg>)
 _Image of components to remove for CO21503 REV F in blue for **A** and red for **B**_
 
 Following parts are needed for the _outputboard_:
@@ -64,7 +77,7 @@ Reference | Part | Amount | For | Additional Information
 --- | --- | --- | --- | ---
 D1 | Kingbright KM23ESGW | 1 | A, B (optional) | only needed if you want a LED, recommended for **B**
 J1 | Amtek 2542R-05TW-L | 1 | A, B (optional) | not needed if cables are soldered directly to the PCB. Other 2.54mm socket could be e.g. a JH2.54 with 5 pins
-- | Amtek 2544H-05R-L | 1 | A, B (optional) | if above is used
+X | Amtek 2544H-05R-L | 1 | A, B (optional) | if above is used
 J2 | Tensility 54-00177 | 1 | A, B |
 Q1 | Nexperia PMBT2222A | 1 | A, B |
 R1 | Yageo RC1206JR-072K2L | 1 | A, B |
@@ -86,7 +99,7 @@ C52 | Yageo CC1206JRNPO9BN470 | 1 |
 C53, C54 | Panasonic ECH-U1H821GX5 | 2 |
 J1, J2, J3, J5 | MPE Garry 087-1-004 | 1 | or Amphenol G800LW304032EU - cut into 4 parts, more pins can be used for X2 and X4
 J4 | Amtek 2542R-06TW-L | 1 | not needed if cables are soldered directly to the PCB. Other 2.54mm socket could be e.g. a JH2.54 with 6 pins
-- | Amtek 2544H-06R-L | 1 | if above is used
+X | Amtek 2544H-06R-L | 1 | if above is used
 L8 | Coilcraft 148-13J12L | 1 | not needed if original L8 is not reused. Other Coilcraft trimable coils are possible with L8a.
 L8a1 | TDK TFM201210ALMA1R5MTAA | 1 | not needed if original L8 is used or another trimable coil which fits the original coil.
 Q4 | Nexperia PMBT2222A | 1 |
@@ -157,8 +170,8 @@ If tv signal is off turn L6 until is video sginal is good again. If audio is noi
 audio still noisy even if the core is fully in or out. Check if your Coil setup is really around 2µH or you have you have
 a different Atari coil which had afaik 2.5µH and more and required a second coil in parallel to bring it back down to 2µH.
 
-![installed older revision of vcsboard and outputboard](./CO21503 RevF Remove.jpg)
-_installed older revision of vcsboard with Coilcraft 148 setup and outputboard_
+![older revision installed of vcsboard and outputboard](./installed.jpg)
+_older revision installed of vcsboard with Coilcraft 148 setup and outputboard_
 
 
 # license
