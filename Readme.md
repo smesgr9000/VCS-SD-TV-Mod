@@ -148,11 +148,11 @@ The second hole is only needed if you want a LED or require the switch (**B**).
 The cable length between the boards should be 20-22cm depending on route and connector used. For the TV signal (brown cable)
 18cm should work fine.
 
-![cable routed through the upper L8 hole and to the back of the console](<./cable managment.jpg>)
+![cable routed through the upper L8 hole and to the back of the console](<./cable management.jpg>)
 
 Otherwise it is possible to avoid drilling by squeezing cables out of the exisiting hole at underside of the system board.
 
-![cable to the underside and through the existing hole](<./alternative managment.jpg>)
+![cable to the underside and through the existing hole](<./alternative cable management.jpg>)
 
 ### only A
 Either use the existing hole in the shield to lead the cable out on the top side or if L6 was removed connect all cables 
