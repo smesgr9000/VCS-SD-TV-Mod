@@ -7,6 +7,7 @@ Currently the mod is only tested on **CO21503 REV B, F** and **F1** devices! Oth
 - [boards](#boards)
    - [vcsboard](#vcsboard)
    - [outputboard](#outputboard)
+- [ordering boards](#ordering-boards)
 - [build boards](#build-boards)
    - [coil configuration](#coil-configuration)
    - [cable pinout](#cable-pinout)
@@ -47,6 +48,28 @@ Because the Atari VCS/2600 is mono only just the first ring has an audio signal.
 
 ![Some revision of the outputboard. First revision with throughole components instead of surface mounted parts](./outputboard.jpg)
 _Some revision. Latest on the left_
+
+## ordering boards
+
+To order the latest version. Open _outputboard_ or _vcsboard_ in KiCad with the KiCad PCB-Editor. Use _Fabrication Output_ > _Gerber_ and select an output folder and agree with _Plot_ with the default configruation. Also use _Fabrication Output_ > _Drill Files_ than select the same output folder and agree with _Generate Drill File_. 
+
+The ordering and manufacturing depends on your selected PCB manufacturer. For www.pcbway.com:
+
+- enter length/width (33mm x 31.5mm for _vcsboard_; 33.9mm x 23.5mm _outputboard_)
+- 2 layers
+- 0.8mm thickness
+- FR4
+- TG 150-160
+- 6/6mil Min Tracking
+- 0.3mm Hole Size
+- Solder Mask - any is fine
+- Silkscreen - any is fine
+- No Edge Connector
+- Finish - any is fine but would suggest HASL
+- Tending Vias
+- 1oz Finish Copper
+
+Upload a zip containing the above generated files. Currently the price for 5 boards should be 5$ for both designs.
 
 ## build boards
 
