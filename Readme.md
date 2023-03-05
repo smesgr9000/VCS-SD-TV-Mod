@@ -2,7 +2,7 @@
 
 VCD-SD-TV-Mod are two addon board for your **Atari VCS/2600 Jr** (Junior) game consoles. It will allow the user to **switch** between the analog **television signal** and standard definition (SD) video using a **composite video** connector. Most Mods normally remove the TV functionallity from the console.
 
-Currently the mod is only tested on **CO21503 REV F** devices! Other may likely **not** work!
+Currently the mod is only tested on **CO21503 REV B, F** and **F1** devices! Other may likely **not** work!
 
 - [boards](#boards)
    - [vcsboard](#vcsboard)
@@ -141,9 +141,18 @@ The cable pinout for J1 on the _outputboard_ with recommended cable color. Every
 ## install boards
 
 ### for A and B
-The U-shaped _outputboard_ should fit perfectly around the tv jack. I would suggest to use one to three sticky 40 by 40mm foam pads 
+The U-shaped _outputboard_ should fit perfectly around the tv jack (J4). I would suggest to use one to three sticky 40 by 40mm foam pads 
 under the _outputboard_ to put into place. Drill one or two holes to the left and right into the back of the tv jack.
 The second hole is only needed if you want a LED or require the switch (**B**).
+
+The cable length between the boards should be 20-22cm depending on route and connector used. For the TV signal (brown cable)
+18cm should work fine.
+
+![cable routed through the upper L8 hole and to the back of the console](<./cable managment.jpg>)
+
+Otherwise it is possible to avoid drilling by squeezing cables out of the exisiting hole at underside of the system board.
+
+![cable to the underside and through the existing hole](<./alternative managment.jpg>)
 
 ### only A
 Either use the existing hole in the shield to lead the cable out on the top side or if L6 was removed connect all cables 
@@ -162,6 +171,8 @@ Optionally you could also install a connector here. Cut pin header into 4 pieces
 - J2 to R56 top pin
 - J3 to C49 bottom pin
 - J5 to R43 top pin
+
+![installed pin header Q4, R56, C49 and R43](<./install pin header.jpg>)
 
 You could also add a pin header to C54 bottom pin and C49 top pin for stability.
 
