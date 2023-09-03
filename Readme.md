@@ -79,7 +79,7 @@ D1 | Kingbright KM23ESGW | 1 | A, B (optional) | only needed if you want a LED, 
 J1 | Amtek 2542R-05TW-L | 1 | A, B (optional) | not needed if cables are soldered directly to the PCB. Other 2.54mm socket could be e.g. a JH2.54 with 5 pins
 X | Amtek 2544H-05R-L | 1 | A, B (optional) | if above is used
 J2 | Tensility 54-00177 | 1 | A, B |
-Q1 | Nexperia PMBT2222A | 1 | A, B |
+Q1 | Nexperia PMBT2222A | 1 | A, B | or Yangzhou MMBT2222A
 R1 | Yageo RC1206JR-072K2L | 1 | A, B |
 R2 | Yageo RC1206JR-073K3L | 1 | A, B |
 R3 | Yageo RC1206JR-0775RL | 1 | A, B |
